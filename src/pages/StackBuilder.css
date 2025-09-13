@@ -1,0 +1,246 @@
+/* frontend/src/pages/StackBuilder.css */
+.stack-builder {
+    min-height: 100vh;
+    background: white;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .builder-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .back-button {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    backdrop-filter: blur(10px);
+  }
+  
+  .builder-header h1 {
+    font-size: 2rem;
+    margin: 0;
+  }
+  
+  .builder-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .builder-title h2 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  .stack-status {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    backdrop-filter: blur(10px);
+  }
+  
+  .test-chat-button {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    backdrop-filter: blur(10px);
+  }
+  
+  .test-chat-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+  
+  .builder-content {
+    display: grid;
+    grid-template-columns: 250px 1fr 300px;
+    height: calc(100vh - 80px);
+  }
+  
+  .components-panel {
+    background: #f8f9fa;
+    padding: 20px;
+    border-right: 1px solid #e1e5e9;
+    overflow-y: auto;
+  }
+  
+  .components-panel h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+  }
+  
+  .component-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .component-item {
+    background: white;
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid #e1e5e9;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .component-item:hover {
+    border-color: #667eea;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+  }
+  
+  .workspace {
+    background: white;
+    position: relative;
+  }
+  
+  .configuration-panel {
+    background: #f8f9fa;
+    padding: 20px;
+    border-left: 1px solid #e1e5e9;
+    overflow-y: auto;
+  }
+  
+  .config-content h3 {
+    color: #333;
+    margin-bottom: 8px;
+  }
+  
+  .config-description {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+  }
+  
+  .config-field {
+    margin-bottom: 15px;
+  }
+  
+  .config-field label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .config-field input,
+  .config-field select,
+  .config-field textarea {
+    width: 100%;
+    padding: 8px 12px;
+    border: 2px solid #e1e5e9;
+    border-radius: 6px;
+    font-size: 0.9rem;
+  }
+  
+  .config-field input:focus,
+  .config-field select:focus,
+  .config-field textarea:focus {
+    outline: none;
+    border-color: #667eea;
+  }
+  
+  .config-placeholder {
+    text-align: center;
+    color: #666;
+    padding: 40px 20px;
+  }
+  
+  .test-button {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    margin-top: 15px;
+  }
+  
+  .test-button:hover {
+    background: #5a67d8;
+  }
+  
+  .react-flow__node-default {
+    background: white;
+    border: 2px solid #667eea;
+    border-radius: 8px;
+    padding: 10px;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+  }
+  
+  .react-flow__handle {
+    background: #667eea;
+  } 
+  /* Add these to your StackBuilder.css */
+.api-key-input {
+    font-family: monospace;
+    letter-spacing: 0.1em;
+  }
+  
+  .debug-button {
+    background: #666;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  .debug-button:hover {
+    background: #555;
+  }
+  
+  .test-chat-button {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    backdrop-filter: blur(10px);
+  }
+  
+  .test-chat-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+  
+  .builder-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
