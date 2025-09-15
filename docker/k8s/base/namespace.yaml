@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: workflow-builder
+  labels:
+    name: workflow-builder
+    app: workflow-builder

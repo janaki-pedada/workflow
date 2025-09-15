@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: workflow-config
+  namespace: workflow-builder
+data:
+  DATABASE_URL: "postgresql://workflow_user:workflow_password@postgres-service:5432/workflow_db"
+  CHROMA_HOST: "chromadb-service"
+  CHROMA_PORT: "8001"
+  REDIS_URL: "redis://redis-service:6379"
+  REACT_APP_API_URL: "http://backend-service:8000"

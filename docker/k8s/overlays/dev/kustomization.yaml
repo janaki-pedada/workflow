@@ -1,0 +1,52 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: workflow-builder-dev
+
+resources:
+- ../../base
+
+patchesStrategicMerge:
+- |-
+  apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    name: backend
+    namespace: workflow-builder-dev
+  spec:
+    replicas: 1
+    template:
+      spec:
+        containers:
+        - name: backend
+          image: workflow-backend:dev
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "100m"
+            limits:
+              memory: "512Mi"
+              cpu: "250m"
+- |-
+  apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    name: frontend
+    namespace: workflow-builder-dev
+  spec:
+    replicas: 1
+    template:
+      spec:
+        containers:
+        - name: frontend
+          image: workflow-frontend:dev
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "50m"
+            limits:
+              memory: "128Mi"
+              cpu: "100m"
+
+commonLabels:
+  environment: development
